@@ -2,13 +2,13 @@
 
 export default class AnagramService{
 
-    private isInvalidCharacters(characters:string):boolean{
+    private hasInvalidCharacters(characters:string):boolean{
         return characters.match(/[^a-z]+/g)?true:false;
     }
 
     isAnagramOfPalindrome(anagram:string):number{
 
-        if(this.isInvalidCharacters(anagram)) return 0;
+        if(this.hasInvalidCharacters(anagram)) return 0;
 
         let evenAnagram = anagram.length % 2 == 0;
         let hasUniqueLetter = false;
