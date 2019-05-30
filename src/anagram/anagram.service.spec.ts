@@ -1,4 +1,4 @@
-import AnagramService from "./anagram.service.ts";
+import AnagramService from "./anagram.service";
 
 
 describe("Anagram Service", function() {
