@@ -1,5 +1,5 @@
+ 
 import AnagramService from "./anagram.service";
-
 
 describe("Anagram Service", function() {
     
@@ -9,7 +9,6 @@ describe("Anagram Service", function() {
         'es!colaalocse',
         'subinoonibus',
         'testeetset',
-        'ttseesteet',
         'santanderrednatnas',
         'qualquercoisa',
     ];
@@ -21,7 +20,7 @@ describe("Anagram Service", function() {
 
     it("should validate anagramsArray to have more than one anagram of palindrome invalid", function() {
         
-        let invalidAnagrams = anagramsArray.filter(anagram => anagramService.isAnagramOfPalindrome(anagram))
+        let invalidAnagrams = anagramsArray.filter(anagram => !anagramService.isAnagramOfPalindrome(anagram))
         expect(
             invalidAnagrams.length
         ).toBeGreaterThan(1);
@@ -38,7 +37,7 @@ describe("Anagram Service", function() {
     it("should validate anagram only  with  lower case characters ", function() {
         
         expect(
-            anagramService.isAnagramOfPalindrome('kaykak')
+            anagramService.isAnagramOfPalindrome('kayak')
         ).toBe(1);
 
     });

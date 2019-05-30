@@ -18,4 +18,4 @@ Faça o clone do projeto em sua máquina e acesse a pasta do mesmo via terminal.
 
 ## Passo 3 - Rodando testes
 
-- Basta rodar o comando `jasmine .\src\anagram\anagram.service.spec.ts`.
+- Basta rodar o comando `npm run test`.
